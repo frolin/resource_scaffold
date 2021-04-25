@@ -6,19 +6,19 @@ Gem::Specification.new do |spec|
   spec.name          = "resource_scaffold"
   spec.version       = ResourceScaffold::VERSION
   spec.authors       = ["Andre Frolov"]
-  spec.email         = ["aafrolov@ceki.ru"]
+  spec.email         = ["fralunia@gmail.com"]
 
   spec.summary       = "Add a custom generator for rails. "
   spec.description   = "Create more complex template"
-  spec.homepage      = "https://github.com/frolin/rails-template-boost"
+  spec.homepage      = "https://github.com/frolin/resource_scaffold"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.4.0")
 
   spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/frolin/rails-template-boost"
-  spec.metadata["changelog_uri"] = "https://github.com/frolin/rails-template-boost"
+  spec.metadata["source_code_uri"] = "https://github.com/frolin/resource_scaffold"
+  spec.metadata["changelog_uri"] = "https://github.com/frolin/resource_scaffold"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
