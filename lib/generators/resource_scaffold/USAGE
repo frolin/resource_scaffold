@@ -1,0 +1,8 @@
+Description:
+    The Gem that generates scaffold for resource!
+
+Example:
+    bin/rails generate scaffold_controller Thing
+
+    This will create:
+        what/will/it/create
