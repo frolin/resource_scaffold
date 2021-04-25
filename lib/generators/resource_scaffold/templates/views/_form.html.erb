@@ -1,4 +1,4 @@
-<%= "<%= form_for @#{singular_name} do |f| %%>" %>
+<%= "<%= form_for #{admin? ? "[:admin, @#{singular_name}]": "@#{singular_name}" } do |f| %%>" %>
 
 <div class="row">
   <div class="col-md-4">

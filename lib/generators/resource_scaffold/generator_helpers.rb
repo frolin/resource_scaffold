@@ -36,6 +36,9 @@ module ResourceScaffold
         File.expand_path(File.join("../templates/", relative_path), __FILE__)
       end
 
+      def admin?
+        options['admin']
+      end
     end
   end
 end
