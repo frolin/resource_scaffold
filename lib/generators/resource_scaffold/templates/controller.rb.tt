@@ -7,10 +7,6 @@ class <%= controller_class_name %>Controller < ApplicationController
   before_action :set_<%= singular_table_name %>, only: [:show, :edit, :update, :destroy]
 
   # GET <%= route_url %>
-  # GET <%= route_url %>
-  # GET <%= route_url %>
-  # GET <%= route_url %>
-  # GET <%= route_url %>
   def index
     @<%= plural_table_name %> = <%= orm_class.all(class_name) %>
   end
@@ -60,13 +56,8 @@ class <%= controller_class_name %>Controller < ApplicationController
       @<%= singular_table_name %> = <%= orm_class.find(class_name, "params[:id]") %>
     end
 
-    # Only allow a list of trusted parameters through.
-    def <%= "#{singular_table_name}_params" %>
-      <%- if attributes_names.empty? -%>
-      params.fetch(:<%= singular_table_name %>, {})
-      <%- else -%>
-      params.require(:<%= singular_table_name %>).permit(<%= permitted_params %>)
-      <%- end -%>
-    end
+   def <%= singular_name %>_params
+    params.require(:<%= singular_name %>).permit(<%= editable_attributes.map { |a| a.name.dup.prepend(':') }.join(', ') %>)
+   end
 end
 <% end -%>
